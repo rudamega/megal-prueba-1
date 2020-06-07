@@ -1,2 +1,21 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= link_to disponibles_path do %>
+  <div class="d-flex justify-content-around text-center" id="disponibles">
+    <div>DISPONIBLES</div>
+    <div><%=@hab_disponible %></div>
+  </div>
+<% end %>
+<%= link_to ocupados_path do %>
+<div class="d-flex justify-content-around text-center" id="ocupados">
+  <div>OCUPADOS</div>
+  <div><%=@hab %></div>
+</div>
+<% end %>
+<div class="d-flex justify-content-around text-center" id="limpiezas">
+  <div>Limpieza</div>
+  <div>03</div> </div>
+<%= link_to mantenimientos_path do %>
+<div class="d-flex justify-content-around text-center" id="mantenimientos">
+  <div>MANTINIMIENTO</div>
+  <div><%=@hab_mantenimiento %></div>
+</div>
+<% end %>

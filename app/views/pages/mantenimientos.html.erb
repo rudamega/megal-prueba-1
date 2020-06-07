@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-between">
+  <div>
+  <h6 class="text-center">El dia de hoy tenemos <%= @hab.length%>en mantenimiento</h6>
+  </div>
+  <div><%= link_to "Atras", root_path %></div>
+</div>
+<% @hab.each do |habi| %>
+  <% if habi["status"] == "mantenimiento" %>
+    <div class="d-flex justify-content-around text-center" id="mantenimientos-nros">
+      <div><%= habi["numero"]%>  </div>
+      <div><%= habi["status"]%> </div>
+    </div>
+  <% end %>
+<% end %>
